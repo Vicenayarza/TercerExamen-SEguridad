@@ -1,0 +1,39 @@
+
+
+-para la lista blanca: 
+
+	sudo systemctl edit sshd
+
+	[Service]
+	IPAccounting=yes
+	IPAddressDeny=any
+	IPAddressAllow=62.174.142.54
+	IPAddressAllow=35.216.188.54
+
+	Hay que borrarlo despues porque la ip publica cambia al apagar
+
+-Para bloquear una pagina:
+
+	ping www.twitter.com 
+	sudo iptables -I INPUT -s 104.244.42.193 -j DROP
+
+	para desbloquear:
+	iptables -D INPUT -s ***.***.***.*** -j DROP
+
+	Para saber las bloqueadas:
+	iptables --list
+
+
+-para bloquear un puerto hacemos:
+
+	sudo apt get-install ufw2
+
+	sudo ufw default allow incoming
+	sudo ufw default allow outgoing
+
+	sudo ufw enable
+	sudo ufw deny 80
+	sudo ufw status
+
+	sudo ufw disable
+
