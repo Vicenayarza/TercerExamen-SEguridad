@@ -1,0 +1,21 @@
+COPIAS DE SEGURIDAD DE SSH
+
+Transferir un archivo desde el sistema local a un servidor remoto
+	-rsync local_file_path user@remote-host:remote_file_path
+	o
+	-scp archivo.txt usuario@dominio.com:/home/usuario
+	
+transferir un archivo desde un servidor remoto al sistema local
+	-rsync user@remote-host:remote_file_path local_file_path
+	o
+	-scp usuario@dominio.com:/home/usuario/archivo.txt Documentos --- ejemplo como si fuese a documentos
+	
+COPIAR ARCHIVOS DE SERVIDOR A SERVIDOR
+scp usuario1@dominio1.com:/home/usuario1/archivo.txt usuario2@dominio2.com:/home/usuario2/
+
+COPIAR UN DIRECTORIO COMPLETO mi ordenador al servidor,
+scp -r /home/mario/carpeta usuario@dominio.com:/home/usuario
+
+
+
+
